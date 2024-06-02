@@ -1,4 +1,4 @@
-const { getAllMold, getMoldById } = require("../handler/handler");
+const { getAllMold, getMoldByNama } = require("../handler/handler");
 
 const routes = [
   {
@@ -8,8 +8,8 @@ const routes = [
   },
   {
     method: "GET",
-    path: "/{id}",
-    handler: getMoldById,
+    path: "/{Nama}",
+    handler: getMoldByNama,
   },
 ];
 

@@ -24,14 +24,25 @@ const getAllMold = async (request, h) => {
   }
 };
 
-const getMoldById = async (request, h) => {
+const getMoldByNama = async (request, h) => {
   let connection;
   try {
     connection = await connectDB();
-    const { id } = request.params;
+    let { Nama } = request.params;
+
+    if (!Nama) {
+      const response = h.response({
+        status: "fail",
+        message: "jamur dengan nama tersebut tidak ditemukan",
+      });
+      return response.code(404);
+    }
+
+    Nama = Nama.toLowerCase();
+
     const [rows] = await connection.execute(
-      "SELECT * FROM mold_table WHERE id = ?",
-      [id]
+      "SELECT * FROM mold_table WHERE Nama = ?",
+      [Nama]
     );
 
     if (rows.length === 0) {
@@ -61,4 +72,4 @@ const getMoldById = async (request, h) => {
   }
 };
 
-module.exports = { getAllMold, getMoldById };
+module.exports = { getAllMold, getMoldByNama };
