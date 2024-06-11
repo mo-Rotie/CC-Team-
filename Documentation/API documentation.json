@@ -1,0 +1,397 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Article API for Capstone",
+    "version": "1.0",
+    "description": "API for article in mo-Rotie Capstone Project",
+    "contact": {
+      "name": "Willy Rumapea",
+      "email": "c207d4ky0847@bangkit.academy"
+    },
+    "license": {
+      "name": "NodeJS license",
+      "url": "https://github.com/nodejs/node/blob/main/LICENSE"
+    }
+  },
+  "servers": [
+    {
+      "description": "endpoint for server article mo-Rotie",
+      "url": "https://api-article-mbgndrsufq-et.a.run.app"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "get all mold data",
+        "description": "path for get all mold data from database",
+        "responses": {
+          "200": {
+            "description": "succes get all mold data ",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "jenis": {
+                        "type": "string"
+                      },
+                      "Nama": {
+                        "type": "string"
+                      },
+                      "Spesies": {
+                        "type": "string"
+                      },
+                      "Deskripsi": {
+                        "type": "string"
+                      },
+                      "Gejala_keracunan": {
+                        "type": "string"
+                      },
+                      "Pengobatan": {
+                        "type": "string"
+                      },
+                      "Gambar": {
+                        "type": "string"
+                      },
+                      "Tgl_dibuat": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "succes": {
+                    "description": "succes get all data from database",
+                    "value": [
+                      {
+                        "id": 1,
+                        "jenis": "jamur",
+                        "Nama": "Black Bread Mold",
+                        "Spesies": "Rhizopus stolonifer",
+                        "Deskripsi": "Jamur ini biasanya muncul sebagai bercak hitam pada permukaan roti yang lembab. Spora berwarna gelap dan dapat menyebar dengan cepat.",
+                        "Gejala_keracunan": "Infeksi serius pada individu dengan sistem kekebalan tubuh yang lemah.",
+                        "Pengobatan": "Pengobatan melibatkan obat antijamur seperti amfoterisin B dan mungkin prosedur bedah untuk menghilangkan jaringan yang terinfeksi.",
+                        "Gambar": "bread-black-mold.jpg",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 2,
+                        "jenis": "jamur",
+                        "Nama": "Penicillium spp",
+                        "Spesies": "Penicillium expansum, Penicillium chrysogenum\r\n",
+                        "Deskripsi": "Sering muncul sebagai bercak hijau atau biru pada roti. Spora halus dan dapat menghasilkan bau khas.",
+                        "Gejala_keracunan": "Reaksi alergi, mual, muntah, dan diare.",
+                        "Pengobatan": "Menghindari konsumsi makanan yang terkontaminasi. Jika gejala berlanjut, segera mencari pertolongan medis.",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 3,
+                        "jenis": "jamur",
+                        "Nama": "Aspergillus spp",
+                        "Spesies": "Aspergillus niger, Aspergillus flavus",
+                        "Deskripsi": "Membentuk koloni berwarna hitam, hijau, atau kuning pada roti. Aspergillus flavus dikenal menghasilkan aflatoksin.",
+                        "Gejala_keracunan": "Kerusakan hati, reaksi alergi, dan aspergillosis.",
+                        "Pengobatan": "Hindari konsumsi makanan yang terkontaminasi. Pengobatan untuk aspergillosis termasuk obat antijamur seperti vorikonazol.\r\n",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 3,
+                        "jenis": "jamur",
+                        "Nama": "Aspergillus spp",
+                        "Spesies": "Aspergillus niger, Aspergillus flavus",
+                        "Deskripsi": "Membentuk koloni berwarna hitam, hijau, atau kuning pada roti. Aspergillus flavus dikenal menghasilkan aflatoksin.",
+                        "Gejala_keracunan": "Kerusakan hati, reaksi alergi, dan aspergillosis.",
+                        "Pengobatan": "Hindari konsumsi makanan yang terkontaminasi. Pengobatan untuk aspergillosis termasuk obat antijamur seperti vorikonazol.\r\n",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 4,
+                        "jenis": "jamur",
+                        "Nama": "Mucor spp",
+                        "Spesies": "Mucor circinelloides, Mucor racemosus",
+                        "Deskripsi": "Membentuk koloni putih atau abu-abu pada roti. Spora cepat menyebar dan tumbuh di lingkungan lembab",
+                        "Gejala_keracunan": "Mukormikosis yang menyebabkan infeksi sinus, otak, dan paru-paru.",
+                        "Pengobatan": "Segera mencari pertolongan medis. Pengobatan melibatkan obat antijamur dan pembedahan jika diperlukan.\r\n",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 5,
+                        "jenis": "jamur",
+                        "Nama": "Cladosporium spp",
+                        "Spesies": "Cladosporium herbarum, Cladosporium cladosporioides",
+                        "Deskripsi": "Membentuk koloni berwarna hijau tua atau hitam pada roti. Tumbuh di lingkungan yang lembab dan hangat.",
+                        "Gejala_keracunan": "Reaksi alergi seperti bersin, mata gatal, dan asma.",
+                        "Pengobatan": "Menghindari paparan dan menggunakan obat anti-alergi. Jika terjadi infeksi serius, mencari bantuan medis.",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 6,
+                        "jenis": "jamur",
+                        "Nama": "Fusarium spp",
+                        "Spesies": "Fusarium oxysporum, Fusarium graminearum",
+                        "Deskripsi": "Tumbuh sebagai koloni berwarna merah muda, putih, atau ungu pada berbagai substrat termasuk roti.",
+                        "Gejala_keracunan": "Produksi mikotoksin seperti fumonisin dan trichothecenes menyebabkan mual, muntah, diare, dan kerusakan organ.",
+                        "Pengobatan": "Menghindari konsumsi. Gejala ringan bisa diobati dengan rehidrasi dan diet lembut. Gejala berat memerlukan perhatian medis.",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 7,
+                        "jenis": "jamur",
+                        "Nama": "Geotrichum candidum",
+                        "Spesies": "Geotrichum candidum",
+                        "Deskripsi": "Koloni berwarna putih atau krem, sering ditemukan pada produk susu fermentasi dan kadang-kadang pada roti.",
+                        "Gejala_keracunan": "Infeksi pada individu dengan sistem kekebalan tubuh yang lemah, menyebabkan geotrichosis",
+                        "Pengobatan": "Pengobatan melibatkan obat antijamur. Infeksi ringan biasanya sembuh dengan sendirinya.",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 8,
+                        "jenis": "jamur",
+                        "Nama": "Alternaria spp",
+                        "Spesies": "Alternaria alternata, Alternaria tenuissima",
+                        "Deskripsi": "Koloni berwarna hitam atau hijau gelap pada permukaan makanan. Tumbuh di lingkungan yang lembab.\r\n",
+                        "Gejala_keracunan": "Reaksi alergi, masalah pernapasan.",
+                        "Pengobatan": "Menghindari konsumsi makanan terkontaminasi dan mengobati gejala alergi dengan antihistamin. Jika terjadi infeksi serius, mencari bantuan medis.",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 9,
+                        "jenis": "informasi",
+                        "Nama": "Cara menyimpan roti yang benar",
+                        "Spesies": "-",
+                        "Deskripsi": "Jamur tumbuh subur di lingkungan yang lembab dan hangat. Simpan roti di tempat yang sejuk dan kering untuk memperlambat pertumbuhan jamur. Lemari penyimpanan roti atau pantry adalah pilihan yang baik.",
+                        "Gejala_keracunan": "-",
+                        "Pengobatan": "-",
+                        "Gambar": "-",
+                        "Tgl_dibuat": "2024-06-10T00:00:00.000Z"
+                      },
+                      {
+                        "id": 10,
+                        "jenis": "informasi",
+                        "Nama": "Waktu penggunaan Roti",
+                        "Spesies": "-",
+                        "Deskripsi": "Roti segar sebaiknya dikonsumsi dalam waktu beberapa hari untuk menghindari pertumbuhan jamur. Jika Anda tidak dapat menghabiskannya dalam waktu singkat, pertimbangkan untuk membekukan sisa roti.",
+                        "Gejala_keracunan": "-",
+                        "Pengobatan": "-",
+                        "Gambar": "-",
+                        "Tgl_dibuat": "2024-06-10T00:00:00.000Z"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "failed to get all data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "fail": {
+                    "description": "failed to get all mold data",
+                    "value": {
+                      "status": "fail",
+                      "message": "database query failed"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{nama}": {
+      "get": {
+        "summary": "select mold data by nama params",
+        "description": "path for get all mold from database with nama params",
+        "parameters": [
+          {
+            "name": "nama",
+            "in": "path",
+            "required": true,
+            "description": "selecting data with nama params",
+            "schema": {
+              "type": "string",
+              "nullable": false,
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "examples": {
+              "black bread mold": {
+                "description": "example for get data black bread mold",
+                "value": "Black Bread Mold"
+              },
+              "penicillium spp": {
+                "description": "example for get data penicillium spp mold",
+                "value": "Penicillium spp"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "succes get all data mold from db",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "jenis": {
+                        "type": "string"
+                      },
+                      "Nama": {
+                        "type": "string"
+                      },
+                      "Spesies": {
+                        "type": "string"
+                      },
+                      "Deskripsi": {
+                        "type": "string"
+                      },
+                      "Gejala_keracunan": {
+                        "type": "string"
+                      },
+                      "Pengobatan": {
+                        "type": "string"
+                      },
+                      "Gambar": {
+                        "type": "string"
+                      },
+                      "Tgl_dibuat": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "success": {
+                    "description": "example condition success get data with Nama parameters",
+                    "value": [
+                      {
+                        "id": 1,
+                        "jenis": "jamur",
+                        "Nama": "Black Bread Mold",
+                        "Spesies": "Rhizopus stolonifer",
+                        "Deskripsi": "Jamur ini biasanya muncul sebagai bercak hitam pada permukaan roti yang lembab. Spora berwarna gelap dan dapat menyebar dengan cepat.",
+                        "Gejala_keracunan": "Infeksi serius pada individu dengan sistem kekebalan tubuh yang lemah.",
+                        "Pengobatan": "Pengobatan melibatkan obat antijamur seperti amfoterisin B dan mungkin prosedur bedah untuk menghilangkan jaringan yang terinfeksi.",
+                        "Gambar": "bread-black-mold.jpg",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      },
+                      {
+                        "id": 2,
+                        "jenis": "jamur",
+                        "Nama": "Penicillium spp",
+                        "Spesies": "Penicillium expansum, Penicillium chrysogenum\r\n",
+                        "Deskripsi": "Sering muncul sebagai bercak hijau atau biru pada roti. Spora halus dan dapat menghasilkan bau khas.",
+                        "Gejala_keracunan": "Reaksi alergi, mual, muntah, dan diare.",
+                        "Pengobatan": "Menghindari konsumsi makanan yang terkontaminasi. Jika gejala berlanjut, segera mencari pertolongan medis.",
+                        "Gambar": "",
+                        "Tgl_dibuat": "2024-05-30T00:00:00.000Z"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "fail to get data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "fail": {
+                    "description": "fail to get data",
+                    "value": {
+                      "status": "fail",
+                      "message": "Maaf, jamur tidak tersedia"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "fail to query database",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "fail": {
+                    "description": "fail connect database",
+                    "value": {
+                      "status": "fail",
+                      "message": "Database query failed"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
