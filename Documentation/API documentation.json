@@ -16,7 +16,7 @@
   "servers": [
     {
       "description": "endpoint for server article mo-Rotie",
-      "url": "https://api-article-mbgndrsufq-et.a.run.app"
+      "url": "https://api-article-capstone-mbgndrsufq-et.a.run.app/"
     }
   ],
   "paths": {
